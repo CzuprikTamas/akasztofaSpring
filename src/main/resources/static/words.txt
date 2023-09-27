@@ -1,0 +1,5 @@
+kutya
+asztal
+kulcs
+szék
+város

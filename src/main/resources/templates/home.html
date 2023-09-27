@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Home</title>
 </head>
 <body>
-$END$
+<h1 th:text="${game.getWord()}"></h1>
+<h1 th:text="${game.getWordWithLine()}"></h1>
+<h1 th:text="${game.getLife()}"></h1>
+<h1 th:text="${game.getInputs()}"></h1>
+    <form th:action="@{/play}" method="post">
+        <input type="text" class="form-control" id="choice" maxlength="1" th:field="*{input.choice}">
+        <label for="choice"></label>
+        <button type="submit">PLAY</button>
+</form>
 </body>
 </html>
